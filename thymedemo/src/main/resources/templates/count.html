@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" http-equiv="refresh" content="5">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="/count.css">
+</head>
+<body>
+<div>
+    <h3>在岗人员统计</h3>
+    <table class="pure-table pure-table-horizontal">
+        <thead>
+        <tr>
+            <th>部门</th>
+            <th>在岗人数</th>
+            <th>在岗人员名集合</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr th:each="data:${data}">
+            <td th:text="${data[0]}"></td>
+            <td th:text="${data[1]}"></td>
+            <td th:text="${data[2]}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
